@@ -1,0 +1,47 @@
+.infinity-path {
+    stroke-opacity:0.7 !important;
+    stroke-dashoffset: 0 !important;
+  }
+
+.time-mark {
+    stroke-dasharray: 0,100;
+    animation: mark-fill 500ms cubic-bezier(0.62, 0.18, 0.4, 0.99) 0s 1 normal forwards running;
+}
+
+#am-pm {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    fill:#616369;
+}
+
+@keyframes fill-up-first {
+    to {
+        stroke-dasharray: 59.4,100;
+    }
+}
+
+@keyframes fill-up {
+    from {
+        stroke-dasharray: 0,100;
+    }
+    to {
+        stroke-dasharray: 59.4,100;
+    }
+}
+
+@keyframes reset {
+    from {
+        stroke-dasharray: 59.4,100;
+    }
+    to {
+        stroke-dasharray: 0,100;
+    }
+}
+
+@keyframes mark-fill {
+    from {
+        stroke-dasharray: 0,100;
+    }
+    to {
+        stroke-dasharray: 4,100;
+    }
+}
